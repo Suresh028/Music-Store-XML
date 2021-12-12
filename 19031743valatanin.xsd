@@ -1,0 +1,113 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="bookstore" type="bookstoreType"/>
+  <xs:complexType name="bookstore_infoType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="storeName"/>
+      <xs:element type="xs:string" name="address"/>
+      <xs:element type="xs:float" name="mobile_number"/>
+      <xs:element type="xs:string" name="email_address"/>
+      <xs:element type="xs:string" name="website_address"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="info_type"/>
+  </xs:complexType>
+  <xs:complexType name="Auther_nameType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="brand_id" use="required">
+          <xs:simpleType>
+              <xs:restriction base="xs:string">
+                  <xs:pattern value="[A][0-9][0-9]"/>
+              </xs:restriction>
+           </xs:simpleType>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="AutherType">
+    <xs:sequence>
+      <xs:element type="Auther_nameType" name="Auther_name"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="gender" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="genreType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="genre_id" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="published_dateType">
+    <xs:sequence>
+      <xs:element type="xs:short" name="year"/>
+      <xs:element type="xs:string" name="month" minOccurs="0"/>
+      <xs:element type="xs:int" name="day" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="media_typeType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="type" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="followed_byType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:short" name="date" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="ratingType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="seller_rating" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="priceType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="currency" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="book_infoType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="country"/>
+      <xs:element type="xs:string" name="language"/>
+      <xs:element type="genreType" name="genre"/>
+      <xs:element type="xs:string" name="publisher"/>
+      <xs:element type="published_dateType" name="published_date"/>
+      <xs:element type="xs:string" name="volume" minOccurs="0"/>
+      <xs:element type="xs:short" name="pages"/>
+      <xs:element type="media_typeType" name="media_type"/>
+      <xs:element type="followed_byType" name="followed_by" minOccurs="0"/>
+      <xs:element type="ratingType" name="rating"/>
+      <xs:element type="priceType" name="price"/>
+    </xs:sequence>
+    <xs:attribute type="xs:int" name="info_id" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="booksType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="book_title"/>
+      <xs:element type="AutherType" name="Auther"/>
+      <xs:element type="xs:string" name="cover_artist" minOccurs="0"/>
+      <xs:element type="xs:string" name="book_description"/>
+      <xs:element type="book_infoType" name="book_info"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="ISBN" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="booklistingType">
+    <xs:sequence>
+      <xs:element type="booksType" name="books" maxOccurs="unbounded" minOccurs="0">
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="title"/>
+  </xs:complexType>
+  <xs:complexType name="bookstoreType">
+    <xs:sequence>
+      <xs:element type="bookstore_infoType" name="bookstore_info"/>
+      <xs:element type="booklistingType" name="booklisting"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

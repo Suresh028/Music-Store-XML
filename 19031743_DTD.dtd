@@ -1,0 +1,54 @@
+<!ELEMENT bookstore (bookstore_info,booklisting)>
+
+<!ELEMENT bookstore_info (storeName,address,mobile_number*,email_address, website_address)>
+<!ATTLIST bookstore_info info_type ID #REQUIRED>
+
+<!ELEMENT storeName (#PCDATA)>
+
+<!ELEMENT address (#PCDATA)>
+<!ELEMENT mobile_number (#PCDATA)>
+<!ELEMENT email_address (#PCDATA)>
+<!ELEMENT website_address (#PCDATA)>
+
+<!ELEMENT booklisting (books+)>
+<!ATTLIST booklisting title ID #REQUIRED>
+<!ELEMENT books (book_title,Auther,cover_artist?,book_description,book_info)>
+<!ATTLIST books  ISBN CDATA #REQUIRED>
+
+<!ELEMENT book_title (#PCDATA)>
+
+<!ELEMENT Auther (Auther_name)>
+<!ATTLIST Auther gender CDATA #IMPLIED>
+<!ELEMENT Auther_name (#PCDATA)>
+<!ATTLIST Auther_name auther_id ID #REQUIRED>
+
+
+<!ELEMENT cover_artist (#PCDATA)>
+
+<!ELEMENT book_description (#PCDATA)>
+
+<!ELEMENT book_info (country,language,genre,publisher,published_date?,volume?,pages,media_type,followed_by?,rating,price)>
+<!ATTLIST book_info info_id CDATA #REQUIRED>
+
+<!ELEMENT country (#PCDATA)>
+<!ELEMENT language (#PCDATA)>
+<!ELEMENT genre (#PCDATA)>
+<!ATTLIST genre genre_id ID #REQUIRED>
+
+<!ELEMENT publisher (#PCDATA)>
+<!ELEMENT published_date (year, month?, day?)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT month (#PCDATA)>
+<!ELEMENT day (#PCDATA)>
+
+<!ELEMENT volume (#PCDATA)>
+<!ELEMENT pages (#PCDATA)>
+<!ELEMENT media_type (#PCDATA)>
+<!ATTLIST media_type type  ID #REQUIRED>
+
+<!ELEMENT followed_by (#PCDATA)>
+<!ATTLIST followed_by date CDATA #REQUIRED>
+<!ELEMENT rating (#PCDATA)>
+<!ATTLIST rating seller_rating CDATA #REQUIRED>
+<!ELEMENT price (#PCDATA)>
+<!ATTLIST price currency CDATA #REQUIRED>

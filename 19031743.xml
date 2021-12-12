@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<bookstore xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+xs:noNamespaceSchemaLocation="19031743_russiandoll.xsd">
+
+	<bookstore_info info_type=" about">
+		<storeName> Ancient Book Store </storeName>
+		<address> Gyaneshwor, Kathmandu</address>
+		<mobile_number> 9868123456</mobile_number>
+		<email_address>ancientbook@gmail.com</email_address>
+		<website_address> http://www.ancientbookstore.com/ </website_address>
+	</bookstore_info>
+	<booklisting title="reading"> <!-- Parent Tag for Book-->
+		<books ISBN="0-7475-4624-X">
+			<book_title> Harry Potter : Goblet of Fire </book_title>
+			<Auther gender="male">
+				<Auther_name auther_id="A01"> A Book By: J.K. Rowling</Auther_name>
+			</Auther>
+			<cover_artist> Cover artist: Marry Grandpre</cover_artist>
+			<book_description>
+				Harry Potter and the Goblet of Fire is a fantasy novel
+				written by British author J. K. Rowling and the fourth 
+				novel in the Harry Potter series. It follows Harry Potter,
+				a wizard in his fourth year at Hogwarts School of Witchcraft
+				and Wizardry, and the mystery surrounding the entry of Harry's
+				name into the Triwizard Tournament,in which he is forced to
+				compete.
+			</book_description>
+			<book_info info_id="0001">
+				<country>United Kingdom</country>
+				<language>English</language>
+				<genre genre_id="G01"> Fantasy </genre>
+				<publisher> Bloomsbury Publisher(UK)</publisher>
+				<published_date>
+					<year>2000</year>
+					<month>July</month>
+					<day>8</day>
+				</published_date>
+				<volume>Volume: 4</volume>
+				<pages>636</pages>
+				<media_type type="To1" >Print</media_type>
+				<followed_by date= "2004">Followed By: Harry Potter: Order of the Phoenix</followed_by>
+				<rating seller_rating="R01">4.6/5</rating>
+				<price currency ="Dollar" >8.99$</price>
+			</book_info>
+		</books>
+		<books ISBN="9-993340995">
+			<book_title>Shirishko Phool</book_title>
+			<Auther gender="Female">
+				<Auther_name auther_id="A02">Parijat</Auther_name>
+			</Auther>
+			<book_description>
+				Shirishko Phool (Nepali: शिरिषको फूल ; translated into English
+				as Blue Mimosa), published in 1964, is a Nepali language novel
+				by Parijat (1937-1993). It was the author's first and most
+				successful novel. It was awarded the Madan Puraskar in 1965.
+			</book_description>	
+			<book_info info_id="0002">
+				<country>Nepal</country>
+				<language>Nepali</language>
+				<genre genre_id="G02"> 	Tragedy </genre>
+				<publisher> Sajha Prakasan</publisher>
+				<published_date>
+					<year>1964</year>
+				</published_date>
+				<pages>65</pages>
+				<media_type type="T02">Print</media_type>
+				<rating seller_rating="R02">4.7/5</rating>
+				<price currency ="Dollar" >Rs.900</price>
+			</book_info>
+		</books>
+		<books ISBN="9789937856386">
+			<book_title>Summer Love</book_title>
+			<Auther gender="male">
+				<Auther_name auther_id="A03">A Book By: Subin Bhattarai</Auther_name>
+			</Auther>
+			<cover_artist> Cover artist: Prinsha Shrestha</cover_artist>
+			<book_description>
+				Summer Love is a Nepali novel by Subin Bhattarai published 
+				by Fine Print in 2012. Bhattarai's second book and first novel,
+			    the plot concerns college students at the Central Department of 
+				Environmental Science (CDES) at Tribhuvan University falling in 
+				love.[3] It was a best selling book in Nepal with in excess of 
+				20,000 copies sold, and one of the best-selling books in the 
+				country for the year
+			</book_description>	
+			<book_info info_id="0003">
+				<country>Nepal</country>
+				<language>Nepali/English</language>
+				<genre genre_id="G03">Love Story</genre>
+				<publisher> Fine Print </publisher>
+				<published_date>
+					<year>2012</year>
+				</published_date>
+				<volume>Volume: 1</volume>
+				<pages>247</pages>
+				<media_type type="T03" >Print</media_type>
+				<followed_by date="2014">Followed By: Saaya</followed_by>
+				<rating seller_rating="R03">4.2/5</rating>
+				<price currency ="NPR" >Rs.800</price>
+			</book_info>
+		</books>
+		<books ISBN="978-0684801520">
+			<book_title>The Great Gatsby</book_title>
+			<Auther gender="Male">
+				<Auther_name auther_id="A04" >F. Scott Fitzgerald</Auther_name>
+			</Auther>
+			<cover_artist>Francis Cugat</cover_artist>
+			<book_description>
+				The Great Gatsby is a 1925 novel by American writer F. Scott Fitzgerald. 
+				Set in the Jazz Age on Long Island, the novel depicts narrator
+				Nick Carraway's interactions with mysterious millionaire Jay Gatsby 
+				and Gatsby's obsession to reunite with his former lover, Daisy Buchanan.
+			</book_description>		
+			<book_info info_id="0004">
+				<country>United States</country>
+				<language>English</language>
+				<genre genre_id="G04"> 	Tragedy </genre>
+				<publisher> Charles Scribner's Sons</publisher>
+				<published_date>
+					<year>1925</year>
+					<month>April</month>
+					<day>10</day>
+				</published_date>
+				<pages>180</pages>
+				<media_type type="T04">Print</media_type>
+				<followed_by date="1934">Tender Is the Night</followed_by>
+				<rating seller_rating="R04">4.8/5</rating>
+				<price currency ="Dollar" >9.99$</price>
+			</book_info>
+		</books>
+	</booklisting>
+</bookstore>
